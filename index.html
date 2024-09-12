@@ -1,0 +1,117 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rebuilt Star</title> 
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #00338d; /* Page background color */
+    }
+
+    .banner {
+      position: relative;
+      text-align: center;
+      padding: 58px 20px;
+      background-color: #333333; /* Gray layer for the banner */
+      margin-bottom: 5px;
+    }
+
+    .banner img {
+      width: 60%; /* Reduced from 80% to 60% for a smaller logo */
+      max-width: 400px; /* Adjusted the maximum width */
+      position: relative;
+      z-index: 2;
+    }
+
+    .banner-line {
+      width: 100%;
+      height: 5px;
+      background-color: #001e53; /* Darker blue line under the banner */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    .button-container {
+      text-align: center;
+      width: calc(100% - 40px);
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-top: -10px;
+      padding: 10px 0;
+    }
+
+    .button {
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 145px;  /* Adjusted width */
+      height: 85px;  /* Adjusted height */
+      display: inline-block;
+      background-color: #00338d;  /* Match page background color */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .button::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .button:active::after {
+      opacity: 1;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="banner">
+    <img src="https://xdzippergames.github.io/zipstatic/xdzipper%20games%20(1).svg" alt="XDZIPPER Games">
+    <div class="banner-line"></div>
+  </div>
+
+  <div class="button-container" id="buttonContainer">
+    <button id="twosidedcannon" class="button" style="background-image: url('https://xdzippergames.github.io/zipstatic/Twosidedlol.png');"></button>
+    <button id="jumpycube" class="button" style="background-image: url('https://xdzippergames.github.io/zipstatic/jumpycube.png');"></button>
+    <button id="parkourcat" class="button" style="background-image: url('https://xdzippergames.github.io/zipstatic/parkour%20cat.png');"></button> <!-- Fixed ID -->
+  </div>
+
+  <script>
+    function openLink(url) {
+      window.location.href = url;
+    }
+
+    document.getElementById('twosidedcannon').addEventListener('click', function () {
+      openLink("twosidedcannon");
+    });
+
+    document.getElementById('jumpycube').addEventListener('click', function () {
+      openLink("jumpycube");
+    });
+
+    document.getElementById('parkourcat').addEventListener('click', function () { // Fixed ID reference
+      openLink("parkourcat");
+    });
+  </script>
+
+
+
+
+
+</body></html>
